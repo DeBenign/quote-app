@@ -1,0 +1,122 @@
+#root, html, body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.app{
+  height:  100%;
+  background-image:url("./images/pexels-sevenstorm-juhaszimrus-443383.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.card{
+  background: whitesmoke;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  height: 30%;
+  padding: 2%;
+  box-shadow: 10px 5px 10px 0;
+  border-radius: 25px;
+  color: black;
+}
+
+.heading{
+  font-family: 'Spartan', sans-serif;
+  display: flex;
+  height: 580px;
+  align-items: center;
+}
+
+button{
+  width: 170px;
+  height: 200px;
+  position: relative;
+  outline: none;
+  text-decoration: none;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: white;
+  border: 1px solid rgba(22,20,176,0.6);
+}
+
+button span{
+  color: #164ca7;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .7px;
+}
+
+button:hover{
+  animation: rotate .7s ease-in-out both;
+}
+
+button:hover span{
+  animation: storm .7s ease-in-out both;
+  animation-delay: .06s;
+}
+
+@keyframes rotate{
+  0%{
+    transform: rotate(0deg) translate3d(0,0,0);
+  }
+
+  25%{
+    transform: rotate(10deg) translate3d(0,0,0);
+  }
+
+  50%{
+    transform: rotate(-3deg) translate3d(0,0,0);
+  }
+
+  75%{
+    transform: rotate(1deg) translate3d(0,0,0);
+  }
+
+  100%{
+    transform: rotate(0deg) translate3d(0,0,0);
+  }
+}
+
+
+@keyframes storm{
+  0%{
+    transform: translate3d(0,0,0) translate(0);
+  }
+
+  25%{
+    transform: translate3d(4px,0,0) translate(-10px);
+  }
+
+  50%{
+    transform: translate3d(-4px,0,0) translate(10px);
+  }
+
+  75%{
+    transform: translate3d(2px,0,0) translate(-10px);
+  }
+
+  100%{
+    transform: translate3d(0,0,0) translate(0);
+  }
+}
+
+@media screen and (max-width:600px) {
+  .card{
+    width: 80%;
+    height: 30%;
+  }
+}
